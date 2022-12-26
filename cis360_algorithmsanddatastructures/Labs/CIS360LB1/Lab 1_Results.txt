@@ -1,0 +1,23 @@
+Enter a desired array size: 
+100000
+Creating array. Please wait.... 
+
+Enter a desired key value: 
+89
+
+Sequential Search
+The key is located at: 624
+
+Time for 100000 is: 341900 nanoseconds
+
+
+Enter a desired array size: 
+100000
+Creating array. Please wait.... 
+
+Enter a desired key value: 
+89
+Binary Search
+The key is located at: 50001
+
+Time for 100000 is: 160900 nanoseconds
