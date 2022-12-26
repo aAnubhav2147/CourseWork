@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://kbroman.org/github_tutorial/pages/init.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Start a new git repository</title>
+    <meta name="description" content="Creating a new git repository">
+    <meta name="author" content="Karl Broman">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="./Start a new git repository_files/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="./Start a new git repository_files/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="./Start a new git repository_files/kbroman.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+    <link rel="SHORTCUT ICON" href="https://kbroman.org/github_tutorial/favicon.ico">
+
+    <!-- atom & rss feed -->
+    <link href="https://kbroman.org/github_tutorialnil" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="https://kbroman.org/github_tutorialnil" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body data-new-gr-c-s-check-loaded="14.1091.0" data-gr-ext-installed="">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="https://kbroman.org/github_tutorial">git/github guide</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+
+<div class="page-header">
+  <h2>Start a new git repository </h2>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <p>Your first instinct, when you start to do something new, should be
+<code class="language-plaintext highlighter-rouge">git init</code>.  You’re starting to write a new paper, you’re writing a
+bit of code to do a computer simulation, you’re mucking around with some
+new data … <em>anything</em>: think <code class="language-plaintext highlighter-rouge">git init</code>.</p>
+
+<h3 id="a-new-repo-from-scratch">A new repo from scratch</h3>
+
+<p>Say you’ve just got some data from a collaborator and are about to
+start exploring it.</p>
+
+<ul>
+  <li>Create a directory to contain the project.</li>
+  <li>Go into the new directory.</li>
+  <li>Type <code class="language-plaintext highlighter-rouge">git init</code>.</li>
+  <li>Write some code.</li>
+  <li>Type <code class="language-plaintext highlighter-rouge">git add</code> to add the files (see the
+<a href="https://kbroman.org/github_tutorial/pages/routine.html">typical use page</a>).</li>
+  <li>Type <code class="language-plaintext highlighter-rouge">git commit</code>.</li>
+</ul>
+
+<p>The first file to create (and add and commit) is probably a ReadMe
+file, either as plain text or with
+<a href="https://daringfireball.net/projects/markdown/">Markdown</a>, describing
+the project.</p>
+
+<p>Markdown allows you to add a bit of text markup, like
+<a href="https://en.wikipedia.org/wiki/Hyperlink">hyperlinks</a>,
+<strong>bold</strong>/<em>italics</em>, or to indicate code with a <code class="language-plaintext highlighter-rouge">monospace
+font</code>. Markdown is easily converted to html for viewing in a web
+browser, and GitHub will do this for you automatically.</p>
+
+<h3 id="a-new-repo-from-an-existing-project">A new repo from an existing project</h3>
+
+<p>Say you’ve got an existing project that you want to start tracking
+with git.</p>
+
+<ul>
+  <li>Go into the directory containing the project.</li>
+  <li>Type <code class="language-plaintext highlighter-rouge">git init</code>.</li>
+  <li>Type <code class="language-plaintext highlighter-rouge">git add</code> to add all of the relevant files.</li>
+  <li>You’ll probably want to create a <code class="language-plaintext highlighter-rouge">.gitignore</code> file right away, to
+indicate all of the files you don’t want to track.  Use <code class="language-plaintext highlighter-rouge">git add
+.gitignore</code>, too.</li>
+  <li>Type <code class="language-plaintext highlighter-rouge">git commit</code>.</li>
+</ul>
+
+<h3 id="connect-it-to-github">Connect it to github</h3>
+
+<p>You’ve now got a local git repository.  You can use git locally, like
+that, if you want.  But if you want the thing to have a home on github, do
+the following.</p>
+
+<ul>
+  <li>Go to <a href="https://github.com/">github</a>.</li>
+  <li>Log in to your account.</li>
+  <li>Click the <a href="https://github.com/new">new repository</a> button in the
+top-right.  You’ll have an option there to initialize the repository with a README
+file, but I don’t.</li>
+  <li>Click the “Create repository” button.</li>
+</ul>
+
+<p>Now, follow the second set of instructions, “Push an existing
+repository…”</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git remote add origin git@github.com:username/new_repo
+$ git push -u origin master
+</code></pre></div></div>
+
+<p>Actually, the first line of the instructions will say</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git remote add origin https://github.com/username/new_repo
+</code></pre></div></div>
+
+<p>But I use <code class="language-plaintext highlighter-rouge">git@github.com:username/new_repo</code> rather than <code class="language-plaintext highlighter-rouge">https://github.com/username/new_repo</code>, as the
+former is for use with
+<a href="https://en.wikipedia.org/wiki/Secure_Shell">ssh</a> (if you set up ssh as
+I mentioned in “<a href="https://kbroman.org/github_tutorial/pages/first_time.html">Your first time</a>”, then you won’t
+have to type your password every time you push things to github). If
+you use the latter construction, you’ll have to type your github
+password every time you push to github.</p>
+
+<p><strong>Next</strong>: <a href="https://kbroman.org/github_tutorial/pages/fork.html">Contribute to someone’s repository</a></p>
+
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer>
+        <p><small>
+  <!-- start of Karl's footer; modify this part -->
+          <a href="https://creativecommons.org/licenses/by/4.0/"><img src="./Start a new git repository_files/88x31.png" alt="CC BY"></a> &nbsp;
+          <a href="https://kbroman.org/">Karl Broman</a>
+  <!-- end of Karl's footer; modify this part -->
+        </small></p>
+      </footer>
+
+    </div>
+
+    
+  
+
+
+<div id="hl-aria-live-message-container" aria-live="polite" class="visually-hidden"></div><div id="hl-aria-live-alert-container" role="alert" aria-live="assertive" class="visually-hidden"></div><div id="speechify-global-notifications"></div><div id="speechify-summarization-fullscreen-mode" style="position: fixed; inset: 0px; overflow: auto; background: white; z-index: 1999; display: none;"></div><div id="speechify-screenshot-mode" style="position: fixed; top: 0px; right: 0px; width: 100%; min-height: 100%; z-index: 2147483640; display: none;"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
