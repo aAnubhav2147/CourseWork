@@ -1,0 +1,125 @@
+Program: ./lkl_time 100
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: 0%
+Program: ./lkl_time 1000
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: ?%
+Program: ./lkl_time 10000
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: 100%
+Program: ./lkl_time 100000
+Total time: 0:00.02
+User Mode (s) 0.01
+Kernel Mode (s) 0.00
+CPU: 90%
+Program: ./lkl_time 1000000
+Total time: 0:00.20
+User Mode (s) 0.17
+Kernel Mode (s) 0.00
+CPU: 91%
+Program: ./lkl_time 10000000
+Total time: 0:02.11
+User Mode (s) 1.94
+Kernel Mode (s) 0.00
+CPU: 92%
+Program: ./lkl_time 100000000
+Total time: 0:20.80
+User Mode (s) 19.20
+Kernel Mode (s) 0.00
+CPU: 92%
+Program: ./lkl_time 1000000000
+Total time: 3:26.59
+User Mode (s) 190.69
+Kernel Mode (s) 0.00
+CPU: 92%
+Program: ./lkl_time 10000000000
+Total time: 5:03.12
+User Mode (s) 279.79
+Kernel Mode (s) 0.00
+CPU: 92%
+Program: ./lkl_time 100
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: ?%
+Program: ./lkl_time 1000
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: ?%
+Program: ./lkl_time 10000
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: 100%
+Program: ./lkl_time 100000
+Total time: 0:00.01
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: 88%
+Program: ./lkl_time 1000000
+Total time: 0:00.18
+User Mode (s) 0.16
+Kernel Mode (s) 0.00
+CPU: 92%
+Program: ./lkl_time 10000000
+Total time: 0:01.97
+User Mode (s) 1.81
+Kernel Mode (s) 0.00
+CPU: 92%
+Program: ./lkl_time 100000000
+Total time: 0:20.27
+User Mode (s) 18.70
+Kernel Mode (s) 0.00
+CPU: 92%
+Program: ./lkl_time 1000000000
+Total time: 3:30.94
+User Mode (s) 194.72
+Kernel Mode (s) 0.00
+CPU: 92%
+Program: ./lkl_time 100
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: ?%
+Program: ./lkl_time 1000
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: 0%
+Program: ./lkl_time 10000
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: 100%
+Program: ./lkl_time 100000
+Total time: 0:00.02
+User Mode (s) 0.02
+Kernel Mode (s) 0.00
+CPU: 90%
+Program: ./lkl_time 1000000
+Total time: 0:00.21
+User Mode (s) 0.20
+Kernel Mode (s) 0.00
+CPU: 92%
+Program: ./lkl_time 10000000
+Total time: 0:02.15
+User Mode (s) 1.99
+Kernel Mode (s) 0.00
+CPU: 92%
+Program: ./lkl_time 100000000
+Total time: 0:21.83
+User Mode (s) 20.14
+Kernel Mode (s) 0.00
+CPU: 92%
+Program: ./lkl_time 1000000000
+Total time: 3:37.85
+User Mode (s) 201.09
+Kernel Mode (s) 0.00
+CPU: 92%

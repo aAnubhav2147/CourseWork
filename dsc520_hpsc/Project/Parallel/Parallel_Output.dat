@@ -1,0 +1,197 @@
+Observations: 891
+Variables: 12
+$ PassengerId <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17…
+$ Survived    <int> 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, …
+$ Pclass      <int> 3, 1, 3, 1, 3, 3, 1, 3, 3, 2, 3, 1, 3, 3, 3, 2, 3, 2, 3, …
+$ Name        <chr> "Braund, Mr. Owen Harris", "Cumings, Mrs. John Bradley (F…
+$ Sex         <chr> "male", "female", "female", "female", "male", "male", "ma…
+$ Age         <dbl> 22, 38, 26, 35, 35, NA, 54, 2, 27, 14, 4, 58, 20, 39, 14,…
+$ SibSp       <int> 1, 1, 0, 1, 0, 0, 0, 3, 0, 1, 1, 0, 0, 1, 0, 0, 4, 0, 1, …
+$ Parch       <int> 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 1, 0, 0, 5, 0, 0, 1, 0, 0, …
+$ Ticket      <chr> "A/5 21171", "PC 17599", "STON/O2. 3101282", "113803", "3…
+$ Fare        <dbl> 7.2500, 71.2833, 7.9250, 53.1000, 8.0500, 8.4583, 51.8625…
+$ Cabin       <chr> "", "C85", "", "C123", "", "", "E46", "", "", "", "G6", "…
+$ Embarked    <chr> "S", "C", "S", "S", "S", "Q", "S", "S", "S", "C", "S", "S…
+Observations: 418
+Variables: 11
+$ PassengerId <int> 892, 893, 894, 895, 896, 897, 898, 899, 900, 901, 902, 90…
+$ Pclass      <int> 3, 3, 2, 3, 3, 3, 3, 2, 3, 3, 3, 1, 1, 2, 1, 2, 2, 3, 3, …
+$ Name        <chr> "Kelly, Mr. James", "Wilkes, Mrs. James (Ellen Needs)", "…
+$ Sex         <chr> "male", "female", "male", "male", "female", "male", "fema…
+$ Age         <dbl> 34.5, 47.0, 62.0, 27.0, 22.0, 14.0, 30.0, 26.0, 18.0, 21.…
+$ SibSp       <int> 0, 1, 0, 0, 1, 0, 0, 1, 0, 2, 0, 0, 1, 1, 1, 1, 0, 0, 1, …
+$ Parch       <int> 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
+$ Ticket      <chr> "330911", "363272", "240276", "315154", "3101298", "7538"…
+$ Fare        <dbl> 7.8292, 7.0000, 9.6875, 8.6625, 12.2875, 9.2250, 7.6292, …
+$ Cabin       <chr> "", "", "", "", "", "", "", "", "", "", "", "", "B45", ""…
+$ Embarked    <chr> "Q", "S", "Q", "S", "S", "S", "Q", "S", "C", "S", "S", "S…
+PassengerId    Survived      Pclass        Name         Sex         Age 
+          0           0           0           0           0         177 
+      SibSp       Parch      Ticket        Fare       Cabin    Embarked 
+          0           0           0           0           0           0 
+PassengerId      Pclass        Name         Sex         Age       SibSp 
+          0           0           0           0          86           0 
+      Parch      Ticket        Fare       Cabin    Embarked 
+          0           0           1           0           0 
+ [1] "PassengerId" "Survived"    "Pclass"      "Name"        "Sex"        
+ [6] "Age"         "SibSp"       "Parch"       "Ticket"      "Fare"       
+[11] "Cabin"       "Embarked"    "Source"     
+ [1] "PassengerId" "Pclass"      "Name"        "Sex"         "Age"        
+ [6] "SibSp"       "Parch"       "Ticket"      "Fare"        "Cabin"      
+[11] "Embarked"    "Source"     
+ [1] "PassengerId" "Pclass"      "Name"        "Sex"         "Age"        
+ [6] "SibSp"       "Parch"       "Ticket"      "Fare"        "Cabin"      
+[11] "Embarked"    "Source"      "Survived"   
+ [1] "PassengerId" "Survived"    "Pclass"      "Name"        "Sex"        
+ [6] "Age"         "SibSp"       "Parch"       "Ticket"      "Fare"       
+[11] "Cabin"       "Embarked"    "Source"     
+Observations: 1,309
+Variables: 13
+$ PassengerId <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17…
+$ Survived    <int> 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, …
+$ Pclass      <int> 3, 1, 3, 1, 3, 3, 1, 3, 3, 2, 3, 1, 3, 3, 3, 2, 3, 2, 3, …
+$ Name        <chr> "Braund, Mr. Owen Harris", "Cumings, Mrs. John Bradley (F…
+$ Sex         <chr> "male", "female", "female", "female", "male", "male", "ma…
+$ Age         <dbl> 22, 38, 26, 35, 35, NA, 54, 2, 27, 14, 4, 58, 20, 39, 14,…
+$ SibSp       <int> 1, 1, 0, 1, 0, 0, 0, 3, 0, 1, 1, 0, 0, 1, 0, 0, 4, 0, 1, …
+$ Parch       <int> 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 1, 0, 0, 5, 0, 0, 1, 0, 0, …
+$ Ticket      <chr> "A/5 21171", "PC 17599", "STON/O2. 3101282", "113803", "3…
+$ Fare        <dbl> 7.2500, 71.2833, 7.9250, 53.1000, 8.0500, 8.4583, 51.8625…
+$ Cabin       <chr> "", "C85", "", "C123", "", "", "E46", "", "", "", "G6", "…
+$ Embarked    <chr> "S", "C", "S", "S", "S", "Q", "S", "S", "S", "C", "S", "S…
+$ Source      <chr> "Train", "Train", "Train", "Train", "Train", "Train", "Tr…
+         Title  Age
+1         Capt 70.0
+2          Col 54.5
+3          Don 40.0
+4         Dona 39.0
+5           Dr 49.0
+6     Jonkheer 38.0
+7         Lady 48.0
+8        Major 48.5
+9       Master  4.0
+10        Miss 22.0
+11        Mlle 24.0
+12         Mme 24.0
+13          Mr 29.0
+14         Mrs 35.5
+15          Ms 28.0
+16         Rev 41.5
+17         Sir 49.0
+18 theCountess 33.0
+ [1] "PassengerId" "Survived"    "Pclass"      "Name"        "Sex"        
+ [6] "Age"         "SibSp"       "Parch"       "Ticket"      "Fare"       
+[11] "Cabin"       "Embarked"    "Source"      "Title"       "FamilySize" 
+[16] "Mother"      "Child"       "FamilyId"    "FamilyId2"   "Deck"       
+[21] "CabinNum"    "CabinPos"   
+ [1] "PassengerId" "Survived"    "Pclass"      "Name"        "Sex"        
+ [6] "Age"         "SibSp"       "Parch"       "Fare"        "Embarked"   
+PassengerId    Survived      Pclass        Name         Sex         Age 
+          0           0           0           0           0           0 
+      SibSp       Parch        Fare    Embarked 
+          0           0           0           0 
+ [1] "PassengerId" "Survived"    "Pclass"      "Name"        "Sex"        
+ [6] "Age"         "SibSp"       "Parch"       "Ticket"      "Fare"       
+[11] "Cabin"       "Embarked"    "Source"      "Title"       "FamilySize" 
+[16] "Mother"      "Child"       "FamilyId"    "FamilyId2"   "Deck"       
+[21] "CabinNum"    "CabinPos"   
+ [1] "PassengerId" "Survived"    "Pclass"      "Name"        "Sex"        
+ [6] "Age"         "SibSp"       "Parch"       "Fare"        "Embarked"   
+Observations: 891
+Variables: 10
+$ PassengerId <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17…
+$ Survived    <fct> 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, …
+$ Pclass      <fct> 3, 1, 3, 1, 3, 3, 1, 3, 3, 2, 3, 1, 3, 3, 3, 2, 3, 2, 3, …
+$ Name        <chr> "Braund, Mr. Owen Harris", "Cumings, Mrs. John Bradley (F…
+$ Sex         <fct> male, female, female, female, male, male, male, male, fem…
+$ Age         <dbl> 22.00000, 38.00000, 26.00000, 35.00000, 35.00000, 28.8628…
+$ SibSp       <int> 1, 1, 0, 1, 0, 0, 0, 3, 0, 1, 1, 0, 0, 1, 0, 0, 4, 0, 1, …
+$ Parch       <int> 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 1, 0, 0, 5, 0, 0, 1, 0, 0, …
+$ Fare        <dbl> 7.2500, 71.2833, 7.9250, 53.1000, 8.0500, 8.4583, 51.8625…
+$ Embarked    <fct> S, C, S, S, S, Q, S, S, S, C, S, S, S, S, S, S, Q, S, S, …
+PassengerId    Survived      Pclass        Name         Sex         Age 
+        891           2           3         891           2          95 
+      SibSp       Parch        Fare    Embarked 
+          7           7         248           4 
+[1] "Survived" "Pclass"   "Sex"      "Age"      "SibSp"    "Parch"    "Fare"    
+[8] "Embarked"
+Survived   Pclass      Sex      Age    SibSp    Parch     Fare Embarked 
+       0        0        0        0        0        0        0        0 
+Survived   Pclass      Sex      Age    SibSp    Parch     Fare Embarked 
+       0        0        0        0        0        0        0        0 
+Time difference of 8.399389 secs
+Time difference of 4.969172 secs
+Time difference of 4.652379 secs
+Time difference of 2.84437 secs
+Time difference of 2.64033 secs
+Time difference of 2.725239 secs
+Time difference of 2.758706 secs
+Time difference of 2.7326 secs
+Time difference of 2.820054 secs
+Time difference of 2.655317 secs
+Time difference of 3.007039 secs
+Time difference of 2.961077 secs
+Time difference of 2.80015 secs
+Time difference of 2.816742 secs
+Time difference of 2.891861 secs
+
+Call:
+ randomForest(formula = Survived ~ ., data = train_copy, ntree = 1000,      mtry = 8, importance = T, proximity = T) 
+               Type of random forest: classification
+                     Number of trees: 5000
+No. of variables tried at each split: 7
+
+Confusion Matrix and Statistics
+
+          Reference
+Prediction   0   1
+         0 546  13
+         1   3 329
+                                         
+               Accuracy : 0.982          
+                 95% CI : (0.971, 0.9897)
+    No Information Rate : 0.6162         
+    P-Value [Acc > NIR] : < 2e-16        
+                                         
+                  Kappa : 0.9618         
+                                         
+ Mcnemar's Test P-Value : 0.02445        
+                                         
+            Sensitivity : 0.9945         
+            Specificity : 0.9620         
+         Pos Pred Value : 0.9767         
+         Neg Pred Value : 0.9910         
+             Prevalence : 0.6162         
+         Detection Rate : 0.6128         
+   Detection Prevalence : 0.6274         
+      Balanced Accuracy : 0.9783         
+                                         
+       'Positive' Class : 0              
+                                         
+Confusion Matrix and Statistics
+
+          Reference
+Prediction   0   1
+         0 244  17
+         1 146  11
+                                          
+               Accuracy : 0.61            
+                 95% CI : (0.5614, 0.6571)
+    No Information Rate : 0.933           
+    P-Value [Acc > NIR] : 1               
+                                          
+                  Kappa : 0.0059          
+                                          
+ Mcnemar's Test P-Value : <2e-16          
+                                          
+            Sensitivity : 0.62564         
+            Specificity : 0.39286         
+         Pos Pred Value : 0.93487         
+         Neg Pred Value : 0.07006         
+             Prevalence : 0.93301         
+         Detection Rate : 0.58373         
+   Detection Prevalence : 0.62440         
+      Balanced Accuracy : 0.50925         
+                                          
+       'Positive' Class : 0               
+                                          

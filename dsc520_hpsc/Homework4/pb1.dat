@@ -1,0 +1,43 @@
+Process 0 , sample 4, num1 = 348.352222
+Process 0 , sample 4, num2 = -108.151883
+Process 0 of 4 local min = -399.601656 
+Process 2 , sample 4, num1 = -362.908902
+Process 2 , sample 4, num2 = 370.374767
+Process 2 of 4 local min = -21.145814 
+Process 1 , sample 4, num1 = 171.378141
+Process 1 , sample 4, num2 = 82.713154
+Process 1 of 4 local min = -140.568683 
+Process 3 , sample 4, num1 = -177.775850
+Process 3 , sample 4, num2 = -47.477169
+Process 3 of 4 local min = 121.033139 
+Still searching for minimum value...
+Process 2 , sample 4, num1 = 25.029457
+Process 2 , sample 4, num2 = -373.213991
+Process 2 of 4 local min = -293.436157 
+Still searching for minimum value...
+Still searching for minimum value...
+Still searching for minimum value...
+Still searching for minimum value...
+Still searching for minimum value...
+Process 3 , sample 4, num1 = -27.518276
+Process 3 , sample 4, num2 = -12.895155
+Process 3 of 4 local min = 60.931053 
+Still searching for minimum value...
+Total time taken = 0.02s
+Still searching for minimum value...
+Total time taken = 0.02s
+Still searching for minimum value...
+Total time taken = 0.02s
+Process 2 , sample 4, Global Min = 0.000000
+Total Reduction time = 0.00s
+Process 0 , sample 4, Global Min = -409.773468
+Total Reduction time = 0.00s
+Process 3 , sample 4, num1 = 386.039872
+Process 3 , sample 4, num2 = 419.770014
+Process 3 of 4 local min = -409.773468 
+Total time taken = 0.02s
+Process 3 , sample 4, Global Min = 0.000000
+Total Reduction time = 0.00s
+Process 1 , sample 4, Global Min = 0.000000
+Total Reduction time = 0.00s
+

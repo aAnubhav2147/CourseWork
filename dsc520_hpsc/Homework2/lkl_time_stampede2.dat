@@ -1,0 +1,30 @@
+Program: ./lkl_time_stampede 100
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: 75%
+Program: ./lkl_time_stampede 1000
+Total time: 0:00.01
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: 90%
+Program: ./lkl_time_stampede 10000
+Total time: 0:00.03
+User Mode (s) 0.03
+Kernel Mode (s) 0.00
+CPU: 92%
+Program: ./lkl_time_stampede 100000
+Total time: 0:00.28
+User Mode (s) 0.28
+Kernel Mode (s) 0.00
+CPU: 99%
+Program: ./lkl_time_stampede 1000000
+Total time: 0:02.70
+User Mode (s) 2.69
+Kernel Mode (s) 0.00
+CPU: 99%
+Program: ./lkl_time_stampede 10000000
+Total time: 0:27.04
+User Mode (s) 27.03
+Kernel Mode (s) 0.00
+CPU: 99%

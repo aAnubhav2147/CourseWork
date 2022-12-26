@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#--------------------------------------------------------------
+
+#SBATCH -J myjob # Job name
+#SBATCH -o myjob.o%j # Name of stdout output file
+#SBATCH -e myjob.e%j # Name of stderr error file
+#SBATCH -p development # Queue (partition) name
+#SBATCH -N 1 # Total # of nodes (must be 1 for serial)
+#SBATCH -n 1 # Total # of mpi task (should be 1 for serial)
+#SBATCH -t 00:05:00 # Run time (hh:mm:ss)
+#SBATCH -A TG-SEE220006 # Name of class allocation
+#SBATCH --mail-user=ashankar@umassd.edu
+#SBATCH --mail-type=all # Send email at beginning and end of job
+
+echo "Hello"
+
+# The "&" allows program to run in the background
+# For example, all four runs of the trap program will be running at the same time.
+
+./trap 10 &
+./trap 100 &
+./trap 1000 &
+./trap 10000 &
+./trap 100000 &
+
+wait # wait until all trap executables are run
+echo "Goodbye"
+

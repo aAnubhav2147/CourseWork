@@ -1,0 +1,16 @@
+#!/bin/bash
+#---------------------------------------------------
+
+#SBATCH -J myjob # Job name
+#SBATCH -o myjob.o%j #Name of stdout output file
+#SBATCH -e myjob.e%j #Name of stderr error file
+#SBATCH -p development #Queue (partition) name
+#SBATCH -N 2 #Total # of nodes lets use 2
+#SBATCH -n 128 #Total # of mpi tasks (64 per node)
+#SBATCH -t 00:05:00 #Run time (hh:mm:ss)
+#SBATCH --mail-user=ashankar@umassd.edu
+#SBATCH --mail-type=all #send email to begin and end of job
+
+echo "Hello"
+ibrun ./helloMPI_c 1000000
+

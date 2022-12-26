@@ -1,0 +1,16 @@
+#!/bin/bash
+#------------------------------------------------------------------
+#SBATCH -J hw3_stampede2
+#SBATCH -o hw3_stampede2.o%j
+#SBATCH -e hw3_stampede2.e%j
+#SBATCH -p development
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -t 02:00:00
+#SBATCH -A TG-SEE220006
+#SBATCH --mail-user=ashankar@umassd.edu
+#SBATCH --mail-type=all
+
+echo "Hello"
+./hw3_stampede.sh
+echo "Goodbye"

@@ -1,0 +1,45 @@
+Program: ./mc2_time 100
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: ?%
+Program: ./mc2_time 1000
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: ?%
+Program: ./mc2_time 10000
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: ?%
+Program: ./mc2_time 100000
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: 100%
+Program: ./mc2_time 1000000
+Total time: 0:00.04
+User Mode (s) 0.03
+Kernel Mode (s) 0.00
+CPU: 90%
+Program: ./mc2_time 10000000
+Total time: 0:00.41
+User Mode (s) 0.37
+Kernel Mode (s) 0.00
+CPU: 90%
+Program: ./mc2_time 100000000
+Total time: 0:04.18
+User Mode (s) 3.85
+Kernel Mode (s) 0.00
+CPU: 92%
+Program: ./mc2_time 1000000000
+Total time: 0:43.20
+User Mode (s) 39.87
+Kernel Mode (s) 0.00
+CPU: 92%
+Program: ./mc2_time 10000000000
+Total time: 0:58.79
+User Mode (s) 54.25
+Kernel Mode (s) 0.00
+CPU: 92%

@@ -1,0 +1,16 @@
+#!/bin/bash
+#------------------------------------------------------------------
+#SBATCH -J likelihood_stampede2
+#SBATCH -o likelihood_stampede2.o%j
+#SBATCH -e likelihood_stampede2.e%j
+#SBATCH -p development
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -t 00:10:00
+#SBATCH -A TG-SEE220006
+#SBATCH --mail-user=ashankar@umassd.edu
+#SBATCH --mail-type=all
+
+echo "Hello"
+./likelihood_stampede2.sh
+echo "Goodbye"

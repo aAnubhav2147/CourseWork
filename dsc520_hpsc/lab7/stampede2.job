@@ -1,0 +1,22 @@
+#!/bin/bash
+#---------------------------------------------------------------
+#SBATCH -J myjob  #Job name
+#SBATCH -o myjob.o%j  #Output file
+#SBATCH -e myjob.e%j #Error file
+#SBATCH -p development #Queue (partition) name
+#SBATCH -N 1 #Node allocation
+#SBATCH -n 64 #Core allocation
+#SBATCH -t 00:05:00 #Run time
+#SBATCH --mail-user=ashankar@umassd.edu
+#SBATCH --mail-type=all # Send email at beginning and end of job
+
+echo "Run 1..."
+export OMP_NUM_THREADS=2
+echo $OMP_NUM_THREADS
+./pf
+
+echo "Run 2..."
+export OMP_NUM_THREADS = 64
+echo $OMP_NUM_THREADS
+./pf
+echo "Program Completed!"

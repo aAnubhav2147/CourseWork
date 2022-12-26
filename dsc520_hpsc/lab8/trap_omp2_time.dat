@@ -1,0 +1,150 @@
+Program: ./trap_omp2_time 2
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: 100%
+Program: ./trap_omp2_time 4
+Total time: 0:00.01
+User Mode (s) 0.05
+Kernel Mode (s) 0.00
+CPU: 570%
+Program: ./trap_omp2_time 8
+Total time: 0:00.01
+User Mode (s) 0.03
+Kernel Mode (s) 0.00
+CPU: 309%
+Program: ./trap_omp2_time 16
+Total time: 0:00.01
+User Mode (s) 0.06
+Kernel Mode (s) 0.00
+CPU: 358%
+Program: ./trap_omp2_time 32
+Total time: 0:00.00
+User Mode (s) 0.04
+Kernel Mode (s) 0.00
+CPU: 600%
+Program: ./trap_omp2_time 64
+Total time: 0:00.00
+User Mode (s) 0.03
+Kernel Mode (s) 0.00
+CPU: 533%
+Program: ./trap_omp2_time 128
+Total time: 0:00.00
+User Mode (s) 0.02
+Kernel Mode (s) 0.00
+CPU: 625%
+Program: ./trap_omp2_time 256
+Total time: 0:00.00
+User Mode (s) 0.03
+Kernel Mode (s) 0.00
+CPU: 620%
+Program: ./trap_omp2_time 512
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: ?%
+Program: ./trap_omp2_time 1024
+Total time: 0:00.00
+User Mode (s) 0.00
+Kernel Mode (s) 0.00
+CPU: 200%
+Program: ./trap_omp2_time 2048
+Total time: 0:00.00
+User Mode (s) 0.03
+Kernel Mode (s) 0.00
+CPU: 600%
+Program: ./trap_omp2_time 4096
+Total time: 0:00.00
+User Mode (s) 0.02
+Kernel Mode (s) 0.00
+CPU: 580%
+Program: ./trap_omp2_time 8192
+Total time: 0:00.00
+User Mode (s) 0.03
+Kernel Mode (s) 0.00
+CPU: 600%
+Program: ./trap_omp2_time 16384
+Total time: 0:00.00
+User Mode (s) 0.02
+Kernel Mode (s) 0.00
+CPU: 520%
+Program: ./trap_omp2_time 32768
+Total time: 0:00.03
+User Mode (s) 0.21
+Kernel Mode (s) 0.00
+CPU: 642%
+Program: ./trap_omp2_time 65536
+Total time: 0:00.03
+User Mode (s) 0.18
+Kernel Mode (s) 0.00
+CPU: 609%
+Program: ./trap_omp2_time 131072
+Total time: 0:00.00
+User Mode (s) 0.03
+Kernel Mode (s) 0.00
+CPU: 344%
+Program: ./trap_omp2_time 262144
+Total time: 0:00.01
+User Mode (s) 0.07
+Kernel Mode (s) 0.00
+CPU: 480%
+Program: ./trap_omp2_time 524288
+Total time: 0:00.01
+User Mode (s) 0.09
+Kernel Mode (s) 0.00
+CPU: 642%
+Program: ./trap_omp2_time 1048576
+Total time: 0:00.02
+User Mode (s) 0.15
+Kernel Mode (s) 0.00
+CPU: 520%
+Program: ./trap_omp2_time 2097152
+Total time: 0:00.04
+User Mode (s) 0.27
+Kernel Mode (s) 0.00
+CPU: 644%
+Program: ./trap_omp2_time 4194304
+Total time: 0:00.09
+User Mode (s) 0.62
+Kernel Mode (s) 0.00
+CPU: 653%
+Program: ./trap_omp2_time 8388608
+Total time: 0:00.14
+User Mode (s) 0.69
+Kernel Mode (s) 0.00
+CPU: 505%
+Program: ./trap_omp2_time 16777216
+Total time: 0:00.28
+User Mode (s) 1.65
+Kernel Mode (s) 0.00
+CPU: 578%
+Program: ./trap_omp2_time 33554432
+Total time: 0:00.76
+User Mode (s) 4.19
+Kernel Mode (s) 0.00
+CPU: 549%
+Program: ./trap_omp2_time 67108864
+Total time: 0:01.14
+User Mode (s) 6.05
+Kernel Mode (s) 0.01
+CPU: 532%
+Program: ./trap_omp2_time 134217728
+Total time: 0:02.80
+User Mode (s) 15.35
+Kernel Mode (s) 0.00
+CPU: 548%
+Program: ./trap_omp2_time 268435456
+Total time: 0:04.05
+User Mode (s) 18.59
+Kernel Mode (s) 0.00
+CPU: 458%
+Program: ./trap_omp2_time 536870912
+Total time: 0:08.12
+User Mode (s) 31.09
+Kernel Mode (s) 0.01
+CPU: 382%
+Program: ./trap_omp2_time 1073741824
+Total time: 0:22.81
+User Mode (s) 122.18
+Kernel Mode (s) 0.00
+CPU: 535%
