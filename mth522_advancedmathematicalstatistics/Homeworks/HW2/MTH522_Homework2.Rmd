@@ -1,0 +1,100 @@
+---
+title: "Homework 2"
+author: "Anubhav Shankar"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+<br/>
+
+**Hat Matrix**: Maps the vector of response values to vector fitted values i.e. a vector of dependent values
+to the vector of fitted/predicted values. It describes the influence of each response variable on the 
+individual fitted values. The diagonal elements of the projection matrix are the leverages.The sum of
+the diagonal elements should be 1.
+<br/>
+```{r Create Dataset}
+
+Age <- c(6,5,4,3,2,2,1,1) # Create a vector of Age values
+Price <- c(6,9,8,10,11,12,11,13) # Create a vector of Price values
+
+# Quick verification - OPTIONAL
+# is.vector(Age)
+# is.vector(Price)
+
+# Let's create a dataframe for ease of use
+df <- data.frame(Age, Price)
+
+str(df)
+```
+
+<br/>
+
+Let's conduct a Linear Regression with the **Price** as the **dependent variable** and **Age** as the **independent variable**. </n>
+
+```{r Linear Regression}
+
+model <- lm(Price~Age, df) 
+
+summary(model) # Examine the result of the linear regression
+
+```
+
+</br>
+
+Now, let's examine the **Hat Matrix**. </n>
+```{r Hat Matrix}
+sum(lm.influence(model)$hat) #Examine the sum of leverages i.e. the diagonals of the hat matrix. Ideally it should be 1
+
+```
+<br/>
+Unfortunately, we get a value of 2. This indicates that the hat matrix is **not symmetrical**. We'll run the regression model again but this time we'll drop the intercept term and see how it goes. </n>
+```{r Linear Model 2}
+
+mod <- lm(Price~ 0 + Age, df) # The addition of zero serves to drop the intercept term from the Linear Regression
+
+summary(mod) # Examine the regression results
+
+```
+</br>
+Let us now examine the Hat matrix for this new model. </n>
+```{r Hat Matrix 2}
+sum(lm.influence(mod)$hat) #Examine the sum of leverages i.e. the diagonals of the hat matrix. Ideally it should be 1
+```
+<br/> </n>
+We see that the sum of the diagonals equals one (1). **This means that the matrix is symmetric**. However, we'll manually check to see if the diagonal values are in the range [0,1] and also verify that the Hat matrix is idempotent. </n>
+```{r Checks}
+
+x <- df$Age # Save the independent variable in a separate matrix
+
+H <- x %*% solve(t(x) %*% x) %*% t(x) # Generate the Hat Matrix
+
+sum(diag(H))
+
+H # Echo the Hat Matrix
+
+H %*% H # Idempotent check
+
+t(H)
+
+```
+<br/>
+**From the above results we can conclude that the Hat Matrix is symmetrical and idempotent. Also, all the diagonal values are in the range [0,1].**
+<br/>
+<br/>
+```{r Part 2}
+
+set.seed(123) # To ensure reproducability
+
+A<-matrix(sample(1:5,16, replace=TRUE),4,4)
+B<-matrix(sample(1:5,16, replace=TRUE),4,4)
+
+sum(diag(A %*% B))
+sum(diag(B %*% A))
+```
+</n>
+**As the sum of the respective matrix diagonal's equal 1, we can conclude that the property Trace(AB) = Trace(BA).**
+<br/>
+
+**References**:</br>
+1.) https://stats.stackexchange.com/questions/125886/linear-model-trace-of-the-hat-matrix-in-r#125887 </br>
+2.) https://math.stackexchange.com/questions/209743/what-is-a-idempotent-matrix

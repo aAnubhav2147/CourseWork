@@ -1,0 +1,107 @@
+---
+title: "Terrorism Analysis"
+author: "Anubhav Shankar"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r Setup, include=F, echo=FALSE}
+
+setwd("C:/Users/anubh/Desktop/Course Requisites/Fall 2022/MTH 522 - Advanced Mathematical Stats/Homeworks/Project 1")
+getwd()
+
+#Install requisite libraries
+library("tidyverse")
+library("dplyr")
+library("tibble")
+```
+<br/>
+**Dataset Description:** The Global Terrorism Database (GTD) is an open-source database including information on terrorist attacks around the world from 1970 through 2017. The GTD includes systematic data on domestic as well as international terrorist incidents that have occurred during this time period and now includes more than 180,000 attacks. The database is maintained by researchers at the National Consortium for the Study of Terrorism and Responses to Terrorism (START), headquartered at the University of Maryland.</n>
+</n>
+The dataset can be found here -> </n> https://www.kaggle.com/datasets/START-UMD/gtd?select=globalterrorismdb_0718dist.csv .</n>
+More information regarding the database overall can be found here -> </n>
+https://www.start.umd.edu/gtd/ </n>
+<br/>
+<br/>
+```{r Data import & preliminary inspection}
+tmp <- read.csv("globalterrorismdb_0718dist.csv")
+#names(tmp)
+glimpse(tmp)
+```
+<br/>
+We see that this is a huge dataset with a lot of information and from the preliminary view, it looks like a lot of the features/fields/variables are categorical. So, in the next step we'll clean the data a bit.</n>
+</br>
+```{r Data Setup Part 1, echo=FALSE}
+terror <- tmp %>% select(where(is.integer)) #Select the only the quantitative variables and save them in another data frame
+
+#glimpse(terror)
+
+terror <- terror %>% select(-(contains("INT_") | contains("mode") | contains("ransom") | contains("host") | contains("natlty") | contains("subtype"))) #Get rid of unnecessary numeric columns
+
+terror <- terror %>% rename(year = iyear, casualties = nkill) #Rename the required fields accordingly
+```
+<br/>
+```{r Data Setup Part 2}
+terror$casualties[is.na(terror$casualties)] <- median(terror$casualties,na.rm = T) #Impute the median value into the required numeric field to replace the NA's
+
+sum(is.na(terror$casualties)) #Ensure that the output is 0.It indicates there are no NA's or any other undesired values
+
+terror$severity <- " " #We need to categorize the attacks basis the casualties racked up
+terror$severity <- ifelse(terror$casualties >= 10, "Major", terror$severity) #For Major terrorist attacks
+terror$severity <- ifelse(terror$casualties < 3, "Minor", terror$severity) #For Minor terrorist attacks
+terror$severity <- ifelse(terror$casualties >= 3 & terror$casualties < 10, "Small", terror$severity) #For small-scale terrorist attacks
+table(terror$severity) #Check the pivot output to ensure that there are no blank rows
+```
+<br/>
+```{r EDA Part 1 & Data Setup Part 3}
+terror_tb <- table(terror$year,terror$severity) #Pivot the data basis the year and severity
+barplot(terror_tb,beside = T, legend.text = F)
+```
+<br/>
+We now have the yearly breakdown of the terrorist strikes basis the severity. The barplot provides us a bird's eye view of the data and we see that there are a lot of **Minor** attacks which happen quite frequently. </n>
+However, let's do a deeper dive into the data. </n>
+<br/>
+```{r Data Setup Part 4, include=FALSE, echo=FALSE}
+terror_tbl <- as.data.frame(terror_tb)
+glimpse(terror_tbl)
+terror_df <- terror_tbl %>% rename(year = Var1, severity = Var2, nAttacks = Freq) #Rename columns accordingly
+glimpse(terror_df)
+sapply(terror_df,class) #Recheck data class to reduce any problems
+```
+<br/>
+```{r EDA Part 2, fig.width=17}
+sum(is.na(terror_df$year)) #Ensure that the output is 0. It indicates there are no NA's or any other undesired values
+sum(is.na(terror_df$nAttacks)) #Ensure that the output is 0.It indicates there are no NA's or any other undesired values
+
+plot(terror_df$year,terror_df$nAttacks,col=terror_df$severity,pch=20,xlab="Year",ylab="Number of Attacks") #Creates a boxplot
+
+
+ggplot(terror_df,aes(year,nAttacks,group=severity,fill=factor(severity))) + geom_point(aes(color=severity)) + scale_color_manual(values = c("red","blue","purple")) + xlab("Year") + ylab("Number of Attacks") #Scatter plot
+```
+<br/>
+From the above plots we see that the **Minor** attacks seem to ebb & flow over the years with the peak in 2016. However, the **Small** and **Major** attacks seem to have increased during 2014-2017.
+
+Let's do a simple regression analysis to analyse the relationship between number of attacks and year.
+<br/>
+```{r Linear Regression}
+set.seed(123) #For reproducability
+terror_model <- lm(nAttacks~year,data = terror_df) #Regression model
+summary(terror_model) #Check output
+```
+<br/>
+From the above model it becomes clear that there is no particular relationship between a calendar year and the frequency of terrorist attacks. This is **indicated particularly well by the respective p-values of the variable and the low R-squared value**. However, we do see that **2014 was particularly significant which is consistent with the peak of attack frequencies across the three varying severities**.
+
+We'll now superpose the regression lines over our earlier scatterplot.
+<br/>
+```{r EDA Part 3, fig.width=17, echo=FALSE}
+ggplot(terror_df,aes(year,nAttacks,group=severity,fill=factor(severity))) + geom_point(aes(color=severity)) + geom_smooth(method = "lm") + scale_color_manual(values = c("red","blue","purple")) + xlab("Year") + ylab("Number of Attacks") + labs(title = "Terror Attacks Linear Regression Plot") + theme(plot.title = element_text(hjust=0.5, size=20, face='bold'))
+```
+<br/>
+We see that the error margin for **Minor** terrorist attacks is very large. However, not so much for the **Major** and **Small** severities which is quite understandable as the trend for both of them are **fairly constant with low fluctuation**.
+<br/>
+<br/>
+**References:** </n>
+1.) https://dplyr.tidyverse.org/ </n>
+2.) http://courses.atlas.illinois.edu/spring2016/STAT/STAT200/RProgramming/RegressionFactors.html </n>
+3.) https://statisticsglobe.com/r-error-continuous-value-supplied-to-discrete-scale </n>
+4.) https://stackoverflow.com/questions/29587881/increase-plot-size-width-in-ggplot2

@@ -1,0 +1,343 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={MTH522 Homework 1},
+  pdfauthor={Anubhav Shankar},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{MTH522 Homework 1}
+\author{Anubhav Shankar}
+\date{2022-10-03}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(UsingR)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required package: MASS
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: HistData
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: Hmisc
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: lattice
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: survival
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: Formula
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: ggplot2
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'Hmisc'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     format.pval, units
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'UsingR'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:survival':
+## 
+##     cancer
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(dplyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:Hmisc':
+## 
+##     src, summarize
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:MASS':
+## 
+##     select
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(ggpubr)}
+\FunctionTok{library}\NormalTok{(rmarkdown)}
+\FunctionTok{library}\NormalTok{(knitr)}
+\end{Highlighting}
+\end{Shaded}
+
+We'll now load the \textbf{Pearson's Father-Son Height} data for further
+evaluation
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fason }\OtherTok{\textless{}{-}}\NormalTok{ father.son }\CommentTok{\# Load the data and save it into an object}
+\FunctionTok{glimpse}\NormalTok{(fason) }\CommentTok{\# Get a quick overview of the data}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 1,078
+## Columns: 2
+## $ fheight <dbl> 65.04851, 63.25094, 64.95532, 65.75250, 61.13723, 63.02254, 65~
+## $ sheight <dbl> 59.77827, 63.21404, 63.34242, 62.79238, 64.28113, 64.24221, 64~
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(fason) }\CommentTok{\# Same as glimpse()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    1078 obs. of  2 variables:
+##  $ fheight: num  65 63.3 65 65.8 61.1 ...
+##  $ sheight: num  59.8 63.2 63.3 62.8 64.3 ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(fason) }\CommentTok{\# Preliminary exploration}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    fheight  sheight
+## 1 65.04851 59.77827
+## 2 63.25094 63.21404
+## 3 64.95532 63.34242
+## 4 65.75250 62.79238
+## 5 61.13723 64.28113
+## 6 63.02254 64.24221
+\end{verbatim}
+
+So, the data contains of two numerical features - \textbf{Father's
+Height (fheight)} and \textbf{Son's Height (sheight)}. There are a total
+of 1078 entries.
+
+Let's create a simple linear regression model by making the son's height
+the dependent variable and father's height as the independent variable.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{model\_fit }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(fason}\SpecialCharTok{$}\NormalTok{sheight }\SpecialCharTok{\textasciitilde{}}\NormalTok{ fason}\SpecialCharTok{$}\NormalTok{fheight) }\CommentTok{\# Create a simple Linear Regression Model}
+\FunctionTok{summary}\NormalTok{(model\_fit) }\CommentTok{\# Get the model statistics}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = fason$sheight ~ fason$fheight)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -8.8772 -1.5144 -0.0079  1.6285  8.9685 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)   33.88660    1.83235   18.49   <2e-16 ***
+## fason$fheight  0.51409    0.02705   19.01   <2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 2.437 on 1076 degrees of freedom
+## Multiple R-squared:  0.2513, Adjusted R-squared:  0.2506 
+## F-statistic: 361.2 on 1 and 1076 DF,  p-value: < 2.2e-16
+\end{verbatim}
+
+\textbf{The Goodness of Fit (R\^{}2) for this data is only 0.2506
+i.e.~only 25\% of the data variance is explained by the independent
+variable, father's height in this case. Also, we see that father's
+height is a significant variable having a p-value \textless\textless{}
+0.05}
+
+Let us now create a simple scatter plot to see the relationship between
+the two variables.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(fason}\SpecialCharTok{$}\NormalTok{fheight, fason}\SpecialCharTok{$}\NormalTok{sheight, }\AttributeTok{xlab =} \StringTok{"Father\textquotesingle{}s Height(in.)"}\NormalTok{, }\AttributeTok{ylab =} \StringTok{"Son\textquotesingle{}s Height(in.)"}\NormalTok{, }
+     \AttributeTok{pch =} \DecValTok{20}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{title}\NormalTok{(}\StringTok{"Height Comparison"}\NormalTok{) }\CommentTok{\# Create a simple Scatter Plot }
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Homework1_files/figure-latex/Simple Scatter Plot-1.pdf}
+
+We see that there is a strong concentration of the observations. This
+might indicate some \emph{correlation}. However, let's create a more
+detailed plot by adding a regression line and a SD line along with
+plotting the respective means of the heights.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot.new}\NormalTok{() }\CommentTok{\# Use this when creating a .Rmd to prevent errors if you have multiple plots in a single file}
+\FunctionTok{ggplot}\NormalTok{(fason,}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ fheight, }\AttributeTok{y =}\NormalTok{ sheight)) }\SpecialCharTok{+} \CommentTok{\# This line initiates the plotting function}
+\FunctionTok{geom\_smooth}\NormalTok{(}\AttributeTok{method =} \StringTok{"lm"}\NormalTok{, }\AttributeTok{color =} \StringTok{"red"}\NormalTok{, }\AttributeTok{size =} \DecValTok{2}\NormalTok{) }\SpecialCharTok{+} \CommentTok{\# This line creates the regression line}
+\FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+} \CommentTok{\# This line generates the points of the scatter plot}
+\FunctionTok{points}\NormalTok{(}\FunctionTok{mean}\NormalTok{(fason}\SpecialCharTok{$}\NormalTok{fheight),}\FunctionTok{mean}\NormalTok{(fason}\SpecialCharTok{$}\NormalTok{sheight)) }\SpecialCharTok{+} \CommentTok{\# This line basically sets the coordinates}
+\FunctionTok{geom\_vline}\NormalTok{(}\AttributeTok{xintercept =} \FunctionTok{mean}\NormalTok{(fason}\SpecialCharTok{$}\NormalTok{fheight),}\AttributeTok{color =} \StringTok{"green"}\NormalTok{) }\SpecialCharTok{+} \CommentTok{\# Adds a vertical line passing through the mean of father\textquotesingle{}s height}
+\FunctionTok{geom\_hline}\NormalTok{(}\AttributeTok{yintercept =} \FunctionTok{mean}\NormalTok{(fason}\SpecialCharTok{$}\NormalTok{sheight),}\AttributeTok{color =} \StringTok{"green"}\NormalTok{) }\SpecialCharTok{+} \CommentTok{\# Adds a vertical line passing through the mean of son\textquotesingle{}s height}
+\FunctionTok{geom\_abline}\NormalTok{(}\AttributeTok{slope =}\NormalTok{ model\_fit}\SpecialCharTok{$}\NormalTok{coefficients[}\DecValTok{2}\NormalTok{],}\AttributeTok{intercept =}\NormalTok{ model\_fit}\SpecialCharTok{$}\NormalTok{coefficients[}\DecValTok{1}\NormalTok{],}\AttributeTok{color =} \StringTok{"blue"}\NormalTok{,}\AttributeTok{size =} \DecValTok{1}\NormalTok{) }\SpecialCharTok{+} \CommentTok{\# This line creates the SD line by getting the intercept and slope from the regression model}
+\FunctionTok{xlab}\NormalTok{(}\StringTok{"Father\textquotesingle{}s Height"}\NormalTok{) }\SpecialCharTok{+} \CommentTok{\# Adds a x{-}axis label}
+\FunctionTok{ylab}\NormalTok{(}\StringTok{"Son\textquotesingle{}s Height"}\NormalTok{) }\CommentTok{\# Adds a y{-}axis label}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Homework1_files/figure-latex/A more detailed plot using ggplot2-1.pdf}
+
+\begin{verbatim}
+## `geom_smooth()` using formula 'y ~ x'
+\end{verbatim}
+
+\includegraphics{Homework1_files/figure-latex/A more detailed plot using ggplot2-2.pdf}
+
+We see that the \textbf{SD line and the regression line overlap
+perfectly}. Concurrently, the mean of father's height and the son's
+height are pretty close by as well.
+
+\end{document}

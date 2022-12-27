@@ -1,0 +1,96 @@
+---
+title: "MTH522 Homework 1"
+author: "Anubhav Shankar"
+date: "2022-10-03"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+
+
+
+```{r Install the relevant packages, results='hide'}
+library(UsingR)
+library(dplyr)
+library(ggplot2)
+library(ggpubr)
+library(rmarkdown)
+library(knitr)
+```
+
+
+
+
+
+We'll now load the **Pearson's Father-Son Height** data for further evaluation
+
+
+
+```{r Load data}
+fason <- father.son # Load the data and save it into an object
+glimpse(fason) # Get a quick overview of the data
+str(fason) # Same as glimpse()
+head(fason) # Preliminary exploration
+
+```
+
+
+
+
+
+So, the data contains of two numerical features - **Father's Height (fheight)** and **Son's Height (sheight)**. There are a total of 1078 entries.
+
+
+
+
+
+Let's create a simple linear regression model by making the son's height the dependent variable and father's height as the independent variable.
+
+
+
+```{r Linear Regression}
+model_fit <- lm(fason$sheight ~ fason$fheight) # Create a simple Linear Regression Model
+summary(model_fit) # Get the model statistics
+```
+
+
+
+
+**The Goodness of Fit (R^2) for this data is only 0.2506 i.e. only 25% of the data variance is explained by the independent variable, father's height in this case. Also, we see that father's height is a significant variable having a p-value << 0.05**
+
+
+
+
+Let us now create a simple scatter plot to see the relationship between the two variables.
+
+```{r Simple Scatter Plot,results='hide'}
+plot(fason$fheight, fason$sheight, xlab = "Father's Height(in.)", ylab = "Son's Height(in.)", 
+     pch = 20) + title("Height Comparison") # Create a simple Scatter Plot 
+```
+
+
+
+
+
+We see that there is a strong concentration of the observations. This might indicate some *correlation*. However, let's create a more detailed plot by adding a regression line and a SD line along with plotting the respective means of the heights. 
+
+
+
+
+```{r A more detailed plot using ggplot2}
+plot.new() # Use this when creating a .Rmd to prevent errors if you have multiple plots in a single file
+ggplot(fason,aes(x = fheight, y = sheight)) + # This line initiates the plotting function
+geom_smooth(method = "lm", color = "red", size = 2) + # This line creates the regression line
+geom_point() + # This line generates the points of the scatter plot
+points(mean(fason$fheight),mean(fason$sheight)) + # This line basically sets the coordinates
+geom_vline(xintercept = mean(fason$fheight),color = "green") + # Adds a vertical line passing through the mean of father's height
+geom_hline(yintercept = mean(fason$sheight),color = "green") + # Adds a vertical line passing through the mean of son's height
+geom_abline(slope = model_fit$coefficients[2],intercept = model_fit$coefficients[1],color = "blue",size = 1) + # This line creates the SD line by getting the intercept and slope from the regression model
+xlab("Father's Height") + # Adds a x-axis label
+ylab("Son's Height") # Adds a y-axis label
+```
+
+
+
+We see that the **SD line and the regression line overlap perfectly**. Concurrently, the mean of father's height and the son's height are pretty close by as well.
