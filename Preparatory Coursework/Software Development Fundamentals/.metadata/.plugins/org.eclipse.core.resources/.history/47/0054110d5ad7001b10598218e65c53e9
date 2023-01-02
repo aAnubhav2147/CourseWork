@@ -1,0 +1,44 @@
+package squarelotron;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class SquarelotronTest {
+
+	@Test
+	public void testSquarelotron() {
+		//fail("Not yet implemented");
+		Squarelotron sn = new Squarelotron(5);
+		assertEquals(5, sn.size);
+		assertEquals(21,sn.squarelotron[4][0]);
+		assertEquals(1,sn.squarelotron[0][0]);
+	}
+
+	@Test
+	public void testOnRing() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testUpsideDownFlip() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testMainDiagnolFlip() {
+		//fail("Not yet implemented");
+	}
+
+	@Test
+	public void testRotateRight() {
+		//fail("Not yet implemented");
+		Squarelotron sn = new Squarelotron(2);
+		sn.rotateRight(-1);
+		assertEquals(2, sn.squarelotron[0][0]);
+		assertEquals(4, sn.squarelotron[0][1]);
+		assertEquals(1, sn.squarelotron[1][0]);
+		assertEquals(3, sn.squarelotron[1][1]);
+	}
+
+}

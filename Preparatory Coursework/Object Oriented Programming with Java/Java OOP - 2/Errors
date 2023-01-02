@@ -1,0 +1,17 @@
+[Executed at: Sat May 22 21:54:03 PDT 2021]
+
+Error: All homework did not pass
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Running: test_toString_output
+Your Fly class has a proper toString() method
+Failed: expected: but was:
+Finished: test_toString_output
+Running: test_setMass_exists
+Finished: test_setMass_exists
+Running: test_setSpeed_exists
+Finished: test_setSpeed_exists
+Running: test_1param_constructor
+Finished: test_1param_constructor

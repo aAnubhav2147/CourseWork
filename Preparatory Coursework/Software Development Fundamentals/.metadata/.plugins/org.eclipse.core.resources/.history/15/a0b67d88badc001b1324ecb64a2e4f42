@@ -1,0 +1,45 @@
+package moviedatabase;
+
+import java.util.*;
+
+public class Movie {
+	String movieName;
+	ArrayList<Actor> actors;
+	double movieRating = 0.0;
+	
+	//Constructor
+	public Movie(String name, double rating){
+		this.movieName = name;
+		actors = new ArrayList<Actor>();
+		this.movieRating = rating;
+	}	
+	
+	//Getters and Setters
+	public String getMovieName() {
+		return movieName;
+	}
+
+	public void setMovieName(String movieName) {
+		this.movieName = movieName;
+	}
+
+	public ArrayList<Actor> getActors() {
+		return actors;
+	}
+
+	public void setActors(ArrayList<Actor> actors) {
+		this.actors = actors;
+	}
+
+	public double getMovieRating() {
+		return movieRating;
+	}
+
+	public void setMovieRating(double movieRating) {
+		this.movieRating = movieRating;
+	}
+	
+	
+	
+
+}

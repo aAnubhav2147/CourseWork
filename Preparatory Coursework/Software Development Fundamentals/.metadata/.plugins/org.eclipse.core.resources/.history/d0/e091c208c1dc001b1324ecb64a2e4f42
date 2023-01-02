@@ -1,0 +1,49 @@
+package moviedatabase;
+
+import java.util.*;
+import java.io.*;
+
+public class MovieDatabase {
+	//Instance variables
+	ArrayList<Movie> movieList;
+	ArrayList<Actor> actorList;
+	
+	//Constructor
+	public MovieDatabase() {
+		movieList = new ArrayList<>();
+		actorList = new ArrayList<>();
+	}
+	
+	//Getters and Setters
+	public ArrayList<Movie> getMovieList() {
+		return movieList;
+	}
+
+	public void setMovieList(ArrayList<Movie> movieList) {
+		this.movieList = movieList;
+	}
+
+	public ArrayList<Actor> getActorList() {
+		return actorList;
+	}
+
+	public void setActorList(ArrayList<Actor> actorList) {
+		this.actorList = actorList;
+	}
+	
+	public void addMovie(String name, String[] actors) {
+		Movie newMovie = new Movie(name);
+		if(!movieList.contains(newMovie)) {
+			movieList.add(newMovie);
+			for(String actorName : actors) {
+				Actor actor = new Actor(actorName);
+				if(!actorList.contains(actor)) {
+					
+				}
+			}
+		}
+	}
+	
+	
+
+}

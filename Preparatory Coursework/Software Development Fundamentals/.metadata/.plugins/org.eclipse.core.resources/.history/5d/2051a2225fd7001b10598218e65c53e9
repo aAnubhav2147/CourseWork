@@ -1,0 +1,66 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class SquarelotronTest {
+
+	@Test
+	public void testSquarelotron() {
+		//fail("Not yet implemented");
+		Squarelotron sn = new Squarelotron(5);
+		assertEquals(5, sn.size);
+		assertEquals(1, sn.squarelotron[0][0]);
+		assertEquals(2, sn.squarelotron[0][1]);
+		assertEquals(19, sn.squarelotron[3][3]);
+		//assertEquals(4, sn.squarelotron[1][1]);
+	}
+
+	@Test
+	public void testOnRing() {
+		//fail("Not yet implemented");
+		Squarelotron sn = new Squarelotron(4);
+		assertTrue(sn.onRing(0, 0, 1));
+		assertTrue(sn.onRing(1, 0, 1));
+		assertTrue(sn.onRing(3, 0, 1));
+		assertTrue(sn.onRing(0, 3, 1));
+		assertTrue(sn.onRing(1, 1, 2));
+		assertTrue(sn.onRing(2, 2, 2));
+	}
+
+	@Test
+	public void testUpsideDownFlip() {
+		//fail("Not yet implemented");
+		Squarelotron sn = new Squarelotron(4);
+		sn = sn.upsideDownFlip(1);
+		assertEquals(13, sn.squarelotron[0][0]);
+		assertEquals(15, sn.squarelotron[0][2]);
+		assertEquals(9, sn.squarelotron[1][0]);
+		assertEquals(6, sn.squarelotron[1][1]);
+		assertEquals(8, sn.squarelotron[2][3]);
+		assertEquals(4, sn.squarelotron[3][3]);
+	}
+
+	@Test
+	public void testMainDiagnolFlip() {
+		//fail("Not yet implemented");
+		Squarelotron sn = new Squarelotron(2);
+		sn = sn.mainDiagnolFlip(1);
+		assertEquals(1, sn.squarelotron[0][0]);
+		assertEquals(3, sn.squarelotron[0][1]);
+		assertEquals(2, sn.squarelotron[1][0]);
+		assertEquals(4, sn.squarelotron[1][1]);
+	}
+
+	@Test
+	public void testRotateRight() {
+		//fail("Not yet implemented");
+		Squarelotron sn = new Squarelotron(3);
+		sn.rotateRight(1);
+		assertEquals(1, sn.squarelotron[0][2]);
+		assertEquals(2, sn.squarelotron[1][2]);
+		assertEquals(3, sn.squarelotron[2][2]);
+		assertEquals(4, sn.squarelotron[0][1]);
+		assertEquals(5, sn.squarelotron[1][1]);
+	}
+
+}

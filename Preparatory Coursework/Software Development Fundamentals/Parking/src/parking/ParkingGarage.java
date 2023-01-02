@@ -1,0 +1,36 @@
+package parking;
+
+public class ParkingGarage {
+	//instance variables
+	
+	private Car[] cars;
+	private int spots;
+	
+	//Constructor
+	public ParkingGarage(int spots) {
+		this.spots = spots;
+		cars = new Car[spots]; //array of length = number of spots
+	}
+	
+	/**
+	 * try and park the car 
+	 * return false if the parking garage is full 
+	 * @param carToBeParked
+	 * @return
+	 */
+	
+	public boolean park(Car carToBeParked) {
+		//loop through the array to find the first empty spot
+		int i = 0;
+		while((cars[i] != null) && (i < cars.length)) {
+			i++; //the first empty spot
+		}
+		if(i == cars.length) {
+			return false;
+		}
+		cars[i] = carToBeParked; //park the car in the first empty slot
+		carToBeParked.setParkingLoc(i); //setting the car's parking spot
+		return true;
+	}
+
+}

@@ -1,0 +1,5 @@
+package moviedatabase;
+
+public class MovieDatabase {
+
+}
